@@ -12,13 +12,28 @@ body {
 .mobile-pop__menu {
     display: flex;
     background-color: white;
-    max-width: 320px;
+    max-width: 360px;
     height: 100%;
     overflow: hidden;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 24px;
-    margin-top: 18px;
+}
+
+@media (max-width: 320px) {
+    .mobile-pop__menu {
+        width: 320px;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-pop__menu {
+        position: absolute;
+        left: 0;
+        height: 1024px;
+        width: 360px;
+        border-right: 1px solid #D9FFF5;
+        box-shadow: 16px 0 52px rgb(14 24 80 / 20%), -2px 0 4px rgb(69 79 126 / 2%);
+    }
 }
 
 .mobile-button__logo {
@@ -129,7 +144,7 @@ body {
 }
 
 .mobile-pop__footer-lang {
-    margin: 0;
+    margin-bottom: 32px;
 }
 
 .mobile-pop__footer-lang__btn {
